@@ -1,6 +1,221 @@
-# burble
-<! DOCTYPE html>
-<head>
-  <title> Hello </title>
-  </head>
-  </html>
+<!DOCTYPE html>
+
+<html lang="en">
+      <meta charset="utf-8">
+	  
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script>
+	  	$(document).ready(function(){
+	  		$("#showerLength").val("way too long");
+	  	})
+		
+		function waterUsage (){
+			//alert("hi");
+			var showers = document.getElementById("showers").value;
+			var duration = document.getElementById("duration").value;
+			var flowrate = document.getElementById("flowrate").value;
+			var energymode = document.getElementById("energymode").value;
+			
+		var gallonswater = duration * showers * flowrate * 365 ;
+			
+		var  kwattsenergy = showers * duration * flowrate * 0.30767052555 * 365;
+		
+		alert("Your water usage per year is: " + gallonswater + " gallons");
+		alert("Your energy usage per year is:" + kwattsenergy + " kiloWatts");
+		
+	}
+		
+	  </script>
+	  
+<style> 
+
+	
+	body{
+		font-family: sand, Times, serif;
+	}
+	
+	.column {
+	  float: left;
+	  width: 33%;
+	}
+
+	.row:after {
+		float: middle;
+	  width: 33%;;
+	  display: table;
+	  clear: both;
+	}
+	
+	.row:after {
+		float: right;
+	  width: 33%;;
+	  display: table;
+	  clear: both;
+  }
+	
+	calculator, table, th, td, tr {
+	  border: 1px solid white;
+	}
+	 calculator {
+	 	
+	 }
+	table {
+	  width: 80%;
+	  align: center;
+	  margin-left: 25px
+	  margin-right: 25px;
+	  
+	}
+
+	th {
+	  height: 50px;
+	}
+	
+	th {
+	  text-align: right;
+	}
+	
+	td {
+	  height: 50px;
+	  vertical-align: bottom;
+	}
+	
+	th, td {
+	  padding: 20px;
+	  text-align: center;
+	}
+	
+	@font-face {
+	  font-family: Futura;
+	  src: url(Futura.ttc);
+	}
+
+	body {
+	  font-family: Futura;
+	}
+	
+
+</style>	 
+    <body style="background-color:white; font-family:Futura.ttc; size: 300px" id="page-top">
+		
+		
+	<div style="margin-top: 0px; text-align:center; height: 800px; background-color:#64adff;" >
+		<h1 style="margin-top:0px; text-align: center; color:white; height: 200px; font-size:50px">burble</h1>	
+		<div style="width: 66%">
+	      <h1 style="color:white;font-size:40px;font-style:bold;" >
+	  	Revolutionize the way you spend your time in the shower. 
+	</h1>
+		<h3 style="margin-top: 50px; color:white; right: 100px;font-size:20px;">
+			The Burble App allows users to listen to their favorite songs in the shower, while making a positive environmental impact. Users can track how much time they spend in the shower, view their progress, and connect with friends.
+		</h3>
+		
+	</div>
+		</div>
+			
+		<img src="currentlyplaying.png" style="width:250px; position: absolute; right: 50px;top:200px; height: 450px" >
+		<img src="mylogo.png" style="width:50px; position: absolute; right: 580px;top:8px; height: 75px" >
+			
+	
+	<div style="text-align:center; height: 600px; width:100%; background-color: white; color: black;" >	
+		
+		<div class="row">
+		  <div class="column">
+			  
+			  <img src="showerstreak.png" style="height: 300px;position: absolute;left: 150px ;top: 1100px;width: 175px;">
+			  <h3 style="height:100px"></h3>
+			  <h3 style="height: 50px;">history</h3>
+			  <p class="tiny-text">
+	View your shower history to track your progress.
+			</p>
+		  </div>
+		  <div class="column">
+			  <h3 style="height:100px"></h3>
+            <h3 style="height:50px">music</h3>
+            <p class="tiny-text">Burble generates a fun playlist containing 4 - 7.5 minutes of music.  You have until the music stops to finish your shower.  </p>
+	 <img src="songs.png" style="height: 300px;position: absolute;top: 1100px;width: 175px;">
+		  </div>
+		  <div class="column">
+			  
+	  <h3 style="height:100px"></h3>
+    <h3 style="height:50px">leaderboard</h3>
+  <p class="tiny-text">
+			See how you compare to the most environmentally-sustainable, music-loving shower-takers. 
+			</p>
+	 <img src="leaderboard.png" style="height: 300px;position: absolute;right: 150px;top: 1100px;width: 175px;">
+			
+		  </div>
+		</div>
+	</section>
+	</div>
+	
+	
+<div style="text-align:center; height: 700px; width:100%; background-color:#ffc862; color:white;" >	
+ 
+<h1 style="height: 150px"></h1>
+     <h2 style="text-align: center">calculate YOUR water usage.</h2>
+     <h4 style="text-align: center">enter the following information to see how much energy and water you use!</h4>
+                 
+					   
+	<table style="width:100%; text-align: center;" id="calculator">
+	
+	  <tr>
+		  <th>number of showers in a day</th> 
+	    <th>average shower duration (minutes)</th> 
+		<th>flow rate (gal/min)</th> 
+	  <th>energy mode (gas or electric)</th> 
+	  </tr>
+	  <tr>
+		
+	    <td><input id="showers" type="text"></input></td>
+	    <td><input id="duration" type="text"></input></td> 
+	    <td><input id="flowrate" type="text"></input></td>
+		<td><input id="energymode" type="text"></input></td>
+	  </tr>
+	
+	</table>
+	
+	<h1 style="height: 50px"></h1>
+	
+	
+
+	<!--Kills:
+	<input type="number" id="kill" name="kill"></input>
+	<br>Deaths:
+	<input type="number" id="death" name="death"></input>
+	<br> -->
+	<button type="submit" onclick="waterUsage()">water usage</button>
+	<p id="gallonswater"></p>
+	
+	<button type="submit" onclick="waterUsage()">energy usage</button>
+	<p id="kwattsenergy"></p>
+	
+	 
+
+	<script>
+	function kd() {
+	  document.getElementById("gallonswater").innerHTML = gallonswater;
+	}
+	</script>
+				
+							
+              </div>
+      </section>
+  
+    
+      <section class="contact footer-color text-white" id="contact" style="background-color:#blue">
+        <div class="container">
+          <h2 style="text-align: center;">want to learn more?</h2>
+          <h3 style = "text-align:center;">click below to visit our instagram page or email us!</h3>
+		  <h4 style="text-align: center;"> instagram: @burbleapp </h4>
+		  <h4 style="text-align: center;"> email: burbleapp@gmail.com </h4>
+        </div>    
+      </section>
+
+      <footer>
+        <div class="container">
+          <p>&copy; 2019 Burble. All Rights Reserved.</p>
+        </div>
+      </footer>
+	  
+  </div>
+<html>
